@@ -1,0 +1,34 @@
+html, body {
+    background-color: #eef1ff;
+}
+
+#tiedot {
+  display: none;
+}
+
+#kartta {
+    width: 100%;
+    height: 500px;
+}
+
+#suosikit {
+    float: right;
+}
+
+.mahduta {
+  width: 95% !important;
+}
+
+.lisatietopainike {
+  cursor: pointer;
+}
+
+.kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eiosumia {
+    margin-left: 2.5em;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js" integrity="sha256-Gdq5BxoczjhbEJLjrYKQ4fvBGx/EQrTWjDM2UrdTot0=" crossorigin="anonymous"></script>
+    <script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="bootstrap-datepicker/locales/bootstrap-datepicker.fi.min.js" charset="UTF-8"></script>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" integrity="sha256-SimsGsu3ragCO+uhwd4Um5PUzUuc3Eg+pxshtVHXYpM=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="tyyli.css">
+    <title>Tapahtumasivu</title>
+  </head>
+  <body>
+
+    <div id="sijainti" class="modal fade" tabindex="0" role="dialog" aria-labelledby="Tapahtuman sijainti">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div id="kartta">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="tiedot">
+      <div class="container panel panel-default mahduta">
+        <div class="row panel-heading">
+          <div class="col-sm-12 lisatietopainike">
+            <h3 class="otsikko">Testiotsikko</h3>
+          </div>
+        </div>
+        <div class="row lisatiedot panel-body panel-collapse collapse">
+          <div class="col-sm-6">
+            <img class="kuva img-circle"></img>
+          </div>
+          <div class="col-sm-6">
+            <h2 class="paikka">osoite kunta</h2>
+            <p class="kuvaus">kuvaus</p>
+            <p class="linkki"></p>
+            <p class="aika"></p>
+            <ul class="ajat"></ul>
+            <div class="btn-group btn-group-justified">
+             <div class="btn-group">
+               <button type="button" class="btn btn-primary suosikit">Suosikit</button>
+             </div>
+             <div class="btn-group">
+               <button type="button" class="btn btn-primary kartalla" data-toggle="modal" data-target="#sijainti">Näytä kartalla</button>
+             </div>
+             <div class="btn-group">
+               <button type="button" class="btn btn-primary">Reittiohjeet</button>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="suodatus">
+      <div class="container panel panel-primary">
+        <div class="row panel-heading">
+          <div class="col-sm-12">
+            <h3>Suodata tapahtumia</h3>
+          </div>
+        </div>
+        <div class="row panel-body">
+          <div class="col-sm-12">
+            <div id="kalenteri"></div>
+            <div class="checkbox">
+              <label><input type="checkbox" id="for-children"> Lapsille</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" id="trade-fair"> Messut</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" id="market"> Tori</label>
+            </div>
+            <button class="btn btn-default" id="suodata">Suodata</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="lista">
+      <div class="container panel panel-primary">
+        <div class="row panel-heading">
+          <div class="col-sm-12">
+            <h3>Hakutulokset (<span id="osumat">0 osumaa</span>)<button class="btn btn-default" id="suosikit">Näytä suosikit</button></h3>
+          </div>
+        </div>
+        <div class="row panel-body">
+          <div id="tulokset">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL2n_ds2N-v1tjNy5fxrCctyjHxcJf7_8"></script>
+
+
+  </body>
+</html>
